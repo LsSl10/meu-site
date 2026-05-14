@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOME DA LOJA</title>
+
+<!-- FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#1e1e1e;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* FUNDO EFEITO */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:lightgreen;
+    filter:blur(180px);
+    opacity:0.08;
+    top:-200px;
+    left:-200px;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:lightgreen;
+    filter:blur(180px);
+    opacity:0.05;
+    bottom:-200px;
+    right:-200px;
+    z-index:-1;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    height:90px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 8%;
+
+    position:fixed;
+    top:0;
+
+    backdrop-filter:blur(10px);
+    background:rgba(30,30,30,0.7);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:lightgreen;
+
+    text-shadow:0 0 10px lightgreen;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:lightgreen;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:150px 8% 100px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://placehold.co/1920x1080') center/cover;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.tag{
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border:1px solid rgba(144,238,144,0.3);
+
+    border-radius:999px;
+
+    background:rgba(144,238,144,0.08);
+
+    color:lightgreen;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:85px;
+    line-height:1.1;
+
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:lightgreen;
+    text-shadow:0 0 15px lightgreen;
+}
+
+.hero p{
+    color:#cfcfcf;
+    font-size:20px;
+
+    margin-bottom:40px;
+
+    line-height:1.7;
+}
+
+/* BOTÕES */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 34px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.primary-btn{
+    background:lightgreen;
+    color:black;
+
+    box-shadow:0 0 20px rgba(144,238,144,0.4);
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+}
+
+.secondary-btn{
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:rgba(255,255,255,0.03);
+
+    color:white;
+}
+
+.secondary-btn:hover{
+    border-color:lightgreen;
+    color:lightgreen;
+}
+
+/* GERAL */
+
+section{
+    padding:120px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title span{
+    color:lightgreen;
+    letter-spacing:3px;
+    font-size:14px;
+}
+
+.section-title h2{
+    font-size:55px;
+    margin-top:10px;
+}
+
+/* SOBRE */
+
+.sobre{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:60px;
+    align-items:center;
+}
+
+.sobre-text{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    padding:40px;
+
+    border-radius:25px;
+}
+
+.sobre-text p{
+    color:#cfcfcf;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.sobre-image img{
+    width:100%;
+    border-radius:25px;
+}
+
+/* SERVIÇOS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    border-color:lightgreen;
+
+    box-shadow:0 0 25px rgba(144,238,144,0.15);
+}
+
+.card h3{
+    color:lightgreen;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+/* GALERIA */
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.galeria-grid img{
+    width:100%;
+    border-radius:20px;
+
+    transition:0.4s;
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* VIDEO */
+
+.video-box{
+    width:100%;
+    aspect-ratio:16/9;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.video-box iframe{
+    width:100%;
+    height:100%;
+}
+
+/* CONTATO */
+
+.contato-box{
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    padding:50px;
+
+    border-radius:25px;
+}
+
+.contato-box p{
+    margin-bottom:18px;
+    color:#cfcfcf;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px;
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,0.05);
+
+    color:#888;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .section-title h2{
+        font-size:40px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        LOGO / NOME
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            SITE PROFISSIONAL
+        </div>
+
+        <h1>
+            NOME DA <span>LOJA</span>
+        </h1>
+
+        <p>
+            Coloque aqui uma frase profissional e chamativa para representar a loja.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#contato" class="btn primary-btn">
+                FALAR AGORA
+            </a>
+
+            <a href="#galeria" class="btn secondary-btn">
+                VER MAIS
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+    <div class="section-title">
+        <span>SOBRE</span>
+        <h2>SOBRE A LOJA</h2>
+    </div>
+
+    <div class="sobre">
+
+        <div class="sobre-text">
+
+            <p>
+                Coloque aqui informações sobre a loja, atendimento,
+                experiência, qualidade e diferenciais.
+            </p>
+
+            <p>
+                Você pode reutilizar esse modelo para qualquer tipo de negócio.
+            </p>
+
+        </div>
+
+        <div class="sobre-image">
+            <img src="https://placehold.co/600x700" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVIÇOS -->
+
+<section id="servicos">
+
+    <div class="section-title">
+        <span>SERVIÇOS</span>
+        <h2>NOSSOS SERVIÇOS</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>SERVIÇO 1</h3>
+
+            <p>
+                Descrição do serviço oferecido pela loja.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>SERVIÇO 2</h3>
+
+            <p>
+                Descrição do serviço oferecido pela loja.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>SERVIÇO 3</h3>
+
+            <p>
+                Descrição do serviço oferecido pela loja.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria">
+
+    <div class="section-title">
+        <span>GALERIA</span>
+        <h2>ALGUNS TRABALHOS</h2>
+    </div>
+
+    <div class="galeria-grid">
+
+        <img src="https://placehold.co/500x500">
+        <img src="https://placehold.co/500x500">
+        <img src="https://placehold.co/500x500">
+        <img src="https://placehold.co/500x500">
+
+    </div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section>
+
+    <div class="section-title">
+        <span>VÍDEO</span>
+        <h2>APRESENTAÇÃO</h2>
+    </div>
+
+    <div class="video-box">
+
+        <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- CONTATO -->
+
+<section id="contato">
+
+    <div class="section-title">
+        <span>CONTATO</span>
+        <h2>FALE CONOSCO</h2>
+    </div>
+
+    <div class="contato-box">
+
+        <p>Telefone: (00) 00000-0000</p>
+
+        <p>Email: contato@email.com</p>
+
+        <p>Endereço da loja</p>
+
+        <br>
+
+        <a href="#" class="btn primary-btn">
+            CHAMAR NO WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 - NOME DA LOJA | Todos os direitos reservados.
+</footer>
+
+<script>
+
+console.log('SITE CARREGADO COM SUCESSO!')
+
+</script>
+
+</body>
+</html>

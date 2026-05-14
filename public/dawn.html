@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Método SlimLife — Emagreça com Saúde</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="logo">SlimLife</div>
+      <div class="nav-actions">
+        <a href="#planos" class="nav-link">Planos</a>
+        <a href="#resultados" class="nav-link">Resultados</a>
+        <a href="#comentarios" class="nav-link">Comentários</a>
+        <a href="#contato" class="btn-small">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero-left">
+      <h1>Emagreça de Forma Natural e Inteligente</h1>
+      <p class="lead">Receitas funcionais, método estruturado e suporte com IA — transforme seu corpo com refeições práticas e gostosas.</p>
+      <div class="cta-row">
+        <a href="#planos" class="cta-primary">Quero Começar Agora</a>
+        <a href="#video" class="cta-ghost">Ver o Vídeo</a>
+      </div>
+
+      <ul class="benefit-list">
+        <li>🍏 Receitas reais e fáceis</li>
+        <li>🔥 Método testado para acelerar resultados</li>
+        <li>🤖 IA para calcular calorias e macros (opcional)</li>
+      </ul>
+    </div>
+    <div class="hero-right">
+      <!-- substitua pela sua imagem em public/img/frutas-hero.jpg -->
+      <img src="img/frutas-hero.jpg" alt="Frutas e alimentação saudável" class="hero-img"/>
+    </div>
+  </header>
+
+  <!-- Video -->
+  <section id="video" class="section video-section">
+    <div class="container">
+      <h2>Entenda como funciona (vídeo explicativo)</h2>
+      <div class="video-box">
+        <!-- coloque seu embed do YouTube aqui quando tiver -->
+        <p class="video-placeholder">Seu vídeo será inserido aqui</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section id="planos" class="section planos-section">
+    <div class="container">
+      <h2>Escolha seu programa</h2>
+      <div class="cards">
+        <!-- Plano 1 -->
+        <article class="card">
+          <h3>Receita Funcional</h3>
+          <p class="price">R$ 29,90</p>
+          <ul>
+            <li>Receita prática (Monjaro style)</li>
+            <li>Lista de compras e preparo</li>
+            <li>Vídeo demonstrativo</li>
+          </ul>
+          <div class="card-cta">
+            <a href="#" class="btn-buy" data-plan="Receita Funcional">Levar a Receita</a>
+          </div>
+        </article>
+
+        <!-- Plano principal -->
+        <article class="card destaque">
+          <div class="badge">Mais comprado</div>
+          <h3>Método SlimLife Completo</h3>
+          <p class="price">R$ 69,90</p>
+          <ul>
+            <li>Receitas + Protocolo 30 dias</li>
+            <li>Guias em PDF e vídeos passo a passo</li>
+            <li>Apoio semanal</li>
+          </ul>
+          <div class="card-cta">
+            <a href="#" class="btn-buy primary" data-plan="Método SlimLife Completo">Quero o Pacote Completo</a>
+          </div>
+        </article>
+
+        <!-- Plano 3 -->
+        <article class="card">
+          <h3>Plano Completo + IA</h3>
+          <p class="price">R$ 99,90</p>
+          <ul>
+            <li>Tudo do pacote completo</li>
+            <li>IA para calcular calorias, macros e cardápios</li>
+            <li>Suporte automatizado</li>
+          </ul>
+          <div class="card-cta">
+            <a href="#" class="btn-buy" data-plan="Plano Completo + IA">Acessar Agora</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados / Fotos -->
+  <section id="resultados" class="section resultados-section">
+    <div class="container">
+      <h2>Transformações Reais</h2>
+      <p class="muted">Fotos enviadas por alunos (substitua pelas suas imagens reais)</p>
+      <div class="gallery">
+        <div class="photo">
+          <img src="img/antes1.jpg" alt="antes">
+          <img src="img/depois1.jpg" alt="depois" class="after">
+          <p>Ana — -7kg em 21 dias</p>
+        </div>
+        <div class="photo">
+          <img src="img/antes2.jpg" alt="antes">
+          <img src="img/depois2.jpg" alt="depois" class="after">
+          <p>Lucas — -10kg em 30 dias</p>
+        </div>
+        <div class="photo">
+          <img src="img/antes3.jpg" alt="antes">
+          <img src="img/depois3.jpg" alt="depois" class="after">
+          <p>Mariana — -8kg em 25 dias</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comentários -->
+  <section id="comentarios" class="section comentarios-section">
+    <div class="container">
+      <h2>O que falam do método</h2>
+
+      <div id="listaComentarios" class="comentarios-list">
+        <!-- Comentários serão carregados via JS -->
+      </div>
+
+      <div class="form-comentario">
+        <h4>Deixe seu comentário</h4>
+        <input id="c-nome" placeholder="Seu nome" />
+        <input id="c-cidade" placeholder="Cidade (opcional)" />
+        <textarea id="c-texto" placeholder="Seu comentário"></textarea>
+        <button id="enviarComentario" class="btn-small">Enviar comentário</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section contato-section">
+    <div class="container">
+      <h2>Fale conosco</h2>
+      <p class="muted">Quer tirar dúvidas ou negociar grupos e licenças? Entre em contato.</p>
+
+      <div class="contato-grid">
+        <div class="contato-info">
+          <p>Email: <strong id="meu-email">dietafi204@gmail.com</strong></p>
+          <p>WhatsApp: <strong id="meu-whatsapp">+55 XX 9XXXX-XXXX</strong></p>
+          <p>Instagram: <strong id="meu-ig">@seuuser</strong></p>
+        </div>
+
+        <form id="formContato" class="contato-form">
+          <input name="nome" placeholder="Seu nome" required />
+          <input name="email" type="email" placeholder="Seu email" required />
+          <input name="whatsapp" placeholder="WhatsApp (opcional)" />
+          <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+          <button type="submit" class="btn-primary">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="ano"></span> SlimLife — Transforme sua alimentação</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
