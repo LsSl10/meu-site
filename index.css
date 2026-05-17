@@ -113,22 +113,6 @@ nav a:hover{
     max-width:900px;
 }
 
-.tag{
-    display:inline-block;
-
-    padding:10px 20px;
-
-    border:1px solid rgba(144,238,144,0.3);
-
-    border-radius:999px;
-
-    background:rgba(144,238,144,0.08);
-
-    color:lightgreen;
-
-    margin-bottom:25px;
-}
-
 .hero h1{
     font-size:85px;
     line-height:1.1;
