@@ -15,7 +15,7 @@ body{
     overflow-x:hidden;
 }
 
-/* FUNDO EFEITO */
+/* FUNDO */
 
 body::before{
     content:'';
@@ -57,9 +57,10 @@ header{
 
     position:fixed;
     top:0;
+    left:0;
 
     backdrop-filter:blur(10px);
-    background:rgba(30,30,30,0.7);
+    background:rgba(30,30,30,0.75);
 
     border-bottom:1px solid rgba(255,255,255,0.05);
 
@@ -102,15 +103,36 @@ nav a:hover{
 
     text-align:center;
 
-    padding:150px 8% 100px;
+    padding:120px 8% 80px;
 
     background:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-    url('https://placehold.co/1920x1080') center/cover;
+    url('https://placehold.co/1920x1080');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hero-content{
     max-width:900px;
+    margin:auto;
+}
+
+.tag{
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border:1px solid rgba(144,238,144,0.3);
+
+    border-radius:999px;
+
+    background:rgba(144,238,144,0.08);
+
+    color:lightgreen;
+
+    margin-bottom:25px;
 }
 
 .hero h1{
@@ -153,6 +175,10 @@ nav a:hover{
     font-weight:600;
 
     transition:0.3s;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .primary-btn{
@@ -282,6 +308,8 @@ section{
     border-radius:20px;
 
     transition:0.4s;
+
+    object-fit:cover;
 }
 
 .galeria-grid img:hover{
@@ -329,6 +357,10 @@ section{
     color:#cfcfcf;
 }
 
+.contato-box .btn{
+    margin-top:15px;
+}
+
 /* FOOTER */
 
 footer{
@@ -340,20 +372,35 @@ footer{
     color:#888;
 }
 
-/* RESPONSIVO */
+/* TABLET */
 
 @media(max-width:900px){
 
     header{
-        flex-direction:column;
         height:auto;
-        padding:20px;
-        gap:20px;
+        padding:15px 5%;
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    .logo{
+        font-size:22px;
     }
 
     nav{
+        gap:15px;
         flex-wrap:wrap;
         justify-content:center;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .hero{
+        padding-top:180px;
     }
 
     .hero h1{
@@ -366,14 +413,43 @@ footer{
 
 }
 
+/* CELULAR */
+
 @media(max-width:600px){
 
+    section{
+        padding:90px 6%;
+    }
+
+    .hero{
+        padding-top:200px;
+    }
+
     .hero h1{
-        font-size:42px;
+        font-size:40px;
+        line-height:1.2;
     }
 
     .hero p{
-        font-size:17px;
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:100%;
+        max-width:300px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .contato-box{
+        padding:35px 20px;
     }
 
 }
